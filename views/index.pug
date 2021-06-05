@@ -1,0 +1,127 @@
+extends layout
+block content
+  body#page-top
+
+    // Navigation
+    nav#sideNav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
+      a.navbar-brand.js-scroll-trigger(href='#page-top')
+        span.d-block.d-lg-none 问卷调查
+        span.d-none.d-lg-block
+          img.img-fluid.img-profile.rounded-circle.mx-auto.mb-2(src='/assets/img/profile.jpg' alt='')
+      button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link.js-scroll-trigger(href='#about') 关于
+          li.nav-item
+            a.nav-link.js-scroll-trigger(href='#experience') 测验
+          li.nav-item
+            a#result_anchor.nav-link.js-scroll-trigger(href='#result') 结果
+          li.nav-item
+            a.nav-link.js-scroll-trigger(href='#skills') 团队
+
+    // Page Content
+    .container-fluid.p-0
+      // About
+      section#about.resume-section
+        .resume-section-content
+          h1.mb-0
+            | 大五人格
+            span.text-primary 能力版
+          .subheading.mb-5
+            |  Hangyu Liu, YU LU, Kaitai Gao, YiMin Liu
+            a(href='259600026@qq.com') ^& 259600026@qq.com
+          p.lead.mb-5
+            | 大五人格能力版，通过问卷的方式，从回答者的性格、能力、情绪特点进行分析，并进行未来职业推荐。
+          .social-icons
+            a.social-icon(href='#')
+              i.fab.fa-linkedin-in
+              |敏感
+            a.social-icon(href='#')
+              i.fab.fa-github
+              |外向
+            a.social-icon(href='#')
+              i.fab.fa-twitter
+              |开放
+            a.social-icon(href='#')
+              i.fab.fa-facebook-f
+              |宜人
+            a.social-icon(href='#')
+              i.fab.fa-facebook-f
+              |尽责
+      hr.m-0
+      // Experience
+      section#experience.resume-section
+        .resume-section-content
+          h2.mb-5 测验
+          p 根据提出的问题选择一个与您最符合的一个程度划分，选项由 1-5 组成，其中 1表示“完全不赞同”， 2表示“比较不赞同”， 3表示“不确定”， 4表示“部分赞同”， 5表示“完全赞同”。
+          .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+            .flex-grow-1
+              //- h3.mb-0 Senior Web Developer
+              - values = [ "1. 我不是一个充满烦恼的人", "2. 我喜欢很多人在我身边 ", "3. 我不喜欢浪费时间去做白日梦 ", "4. 我的确喜欢我所遇见的大部分人 ", "5. 我会保持我的物件整洁及整齐 ","6. 我经常感到自己不如别人 ", "7. 我很容易笑 ","8. 当我找到了做事情的正确方法后，我会坚持采用这个方法 ","9. 我时常和家人或朋友起争执 ","10. 我经常能按照自己的步骤把事情办妥 ","11. 当我处于极大的压力下，有时候会感到精神崩溃似的 ","12. 我并不觉得我自己特别轻松、无忧无虑 ","13. 大自然和艺术的规律形态使我感到奥妙无穷 ","14. 有些人觉得我自私且自我中心 ","15. 我不是一个做事有条不紊的人 ","16. 我很少感到寂寞或忧郁 ","17. 我很喜欢与别人交谈 ","18. 我认为让学生听富有争议性的演讲只会混淆及误导他们的思想 ","19. 我宁愿与人合作，而不愿与人竞争 ","20. 我会尽心尽力完成一切分派给我的任务 ","21. 我经常感到紧张及心神不定 ","22. 我喜欢置身于富有刺激性的事件中 ","23. 我对诗词只有少许感觉甚至无动于衷 ","24. 我常常怀疑和讽刺别人的意图 ","25. 我有一些明确的目标，并能有条不紊地朝着它工作 ","26. 有时我感到自己完全一文不值 ","27. 我一向喜欢单独学习 ","28. 我经常会去尝试新的及外国的食物 ","29. 我相信如果你允许别人占你的便宜，很多人都会这么做 ","30. 我要花很多时间才能安顿心情开始学习 ","31. 我很少感到恐惧和焦虑 ","32. 我常常感到精力旺盛 ","33. 我很少注意自己在不同环境下的情绪和感受 ","34. 大部分认识我的人都喜欢我 ","35. 我努力完成我的目标 ","36. 别人对待我的方式常使我感到愤怒 ","37. 我是一个快乐、高兴的人 ","38. 我认为在道德问题上做决定时，我们应遵从父母或老师权威的判断 ","39. 有些人觉得我是一个冷漠、有心计的人 ","40. 当我作出承诺后，别人总是相信我会兑现 ","41. 许多时候，当事情不对劲时，我会感到挫败并且想放弃 ","42. 我并不是一个乐观主义者 ","43. 当我读一首诗或欣赏一件艺术品时，我有时会感到兴奋或惊喜 ","44. 我的态度是讲求实际且不感情用事 ","45. 我有时没有做到像我应该的那样可靠和值得信赖 ","46. 我很少感到忧郁或沮丧 ","47. 我生活的节奏很快 ","48. 我没有兴趣去思考宇宙的本质及人类的现状等问题 ","49. 我通常会尽量体贴且考虑周到 ","50. 我做事有效果，也有效率 ","51. 我经常感到无助，并希望有人能解决我的问题 ","52. 我是一个十分活跃的人 ","53. 我对思想性的事充满好奇 ","54. 如果我不喜欢某一个人，我会让他知道 ","55. 我好象总是不能把事情安排得井井有条 ","56. 有好几次我羞愧得直想躲起来 ","57. 我宁愿我行我素，也不愿成为别人的领导 ","58. 我喜欢思考及玩味理论和抽象的概念 ","59. 如果必要，我愿意影响别人以便得到我所想要得到的 ","60. 我凡事必追求卓越 ","61. 当您一个人在陌生聚会上，您会感到强烈不适与焦虑 ","62. 当与喜欢的人分享生活日常，您会感到十分开心 ","63. 社交对于您来说是一件充满痛苦的事情 ","64. 当要求您在一天的时间里想出一个有趣的广告创意，您会觉得轻松不在话下 ","65. 当学习中需要大量的头脑风暴时，您会感到焦虑感 ","66. 您时常觉得自己充满天马行空的想法 ","67. 当临时被安排任务时，您会感到不知所措，无从下手 ","68. 您会严格遵循您的计划行事 ","69. 您经常觉得疲倦不想做任何事情 ","70. 完成一件任务，您会反复确认才觉得踏实 ","71. 对每一件事情您都会特别认真的完成 ","72. 您时常感到烦恼而无法专注 ","73. 您对于“人需要在自己擅长领域里不断学习才能有所提升”的观念表示认同 ","74. 您对于短时间内进行一个能力的提升很有自信 ","75. 您会认真花大量时间在您的领域认真专研 ","76. 当在团队合作中，您对于需要组织协调组员而感到痛苦 ","77. 当您是活动策划人时，如果现场出现混乱的局面，您会感到疲惫感 ","78. 您热衷于在团队中起带头的作用 ","79. 对于未知的未来，您常陷入恐慌中 ","80. 当临时决定一场说走就走的旅行时，您会感到特别放松，没有心理负担 ","81. 当需要融入到一个新环境中时，您不会有太大的心理负担 ","82. 您是一个敏感的人，时常感到悲伤难过 ","83. 当看到陌生电话号码时，您会充满警惕 ","84. 您能很敏锐的看穿一个人的动机 ","85. 当看到负面的新闻时，您会不假思索感到愤怒 ","86. 当还有二十分钟交卷时您发现有一道题答案出错，您能冷静的重新进行分析 ","87. 您偶尔还是会冲动性消费 ","88. 在与他人的交涉中，您对于表述自己的看法而时常感到害怕 ","89. 当您没有清楚表达自己想法时，您会感到心情低落 ","90. 当您为一次公开演讲做足了充分准备，您会感到无比自信 ","91. 您觉得通过深度思考而进行决策对于您来说是一件痛苦的事情 ","92. 您时常对未来充满憧憬 ","93. 当接触到一个新鲜事物时，您会好奇地研究 ","94. 您时常鼓励自己“坚持就是胜利” ","95. 当需要一周的时间才能完成某件事情时，您会感到头疼 ","96. 相对于高压高薪的工作，您更喜欢轻松但薪酬一般的工作 ","97. 当某个项目需要团队合作时，您会感到压力和焦虑感 ","98. 您常和朋友互帮互助，并享受这种亲密无间的感觉 ","99. 您是否会因为一些个人原因而把很重要的事情托付给朋友或者团队成员 ","100. 当您无话不谈的好友忙于学习，很长时间没有和您联系，您是否会感到不满 ","101. 当您独自在外学习以及生活时是否会觉得强烈的疲惫感 ","102. 当您独自解决一些很难得问题或承受一些事情时是否会感到精神崩溃似的 ","103. 当曾与您产生过矛盾的人在您有困难时毫不犹豫向您提供帮助，您第一感受是感激 ","104. 当新认识的人对您关怀备至，您会很容易就被感动 ","105. 当曾对您有帮助的同学，有求于你，虽然您有其他事情，但您仍会耐心的停下来帮忙 ","106. 您喜欢与人打交道的工作 ","107. 您喜欢有创意的工作 ","108. 您喜欢与分析相关的工作 ","109. 您喜欢与管理相关的工作 ","110. 您喜欢与艺术相关的工作 ","111. 您喜欢独立思考专研的工作 ","112. 您喜欢与文化娱乐相关的工作 ","113. 您喜欢冷静思考表达自己的工作 ",]
+              form#big5personquestion
+                each val, index in values
+                  .subheading.mb-3= val
+                    br
+                    form
+                      each _number in [" 1 ", "2 ","3 ","4 ","5 " ]
+                        input(id="radio" + index  name= "radio" + index type="radio" value= _number)
+                        label(for="radio" + index style= "margin-right: 0.8rem ; margin-left: 1rem;")= _number + " "
+              button#summit 提交
+            .flex-shrink-0
+              span.text-primary March 2020 - Present
+      //# region Education
+      section#result.resume-section
+        .resume-section-content
+          h2.mb-5 测验结果
+          .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+            .flex-grow-1
+              canvas#cv
+              h4.mb-0 您最突出的性格特点为：
+              #personality_tex.subheading.mb-3
+              div 综合您的性格与能力分布特点，对您较适合的职业进行选择：
+              //- span 更多付费内容点击：
+              //-   a(href="http://39.99.133.95:8002/position/get_level1/?level1=%E6%8A%80%E6%9C%AF|%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91") 职位查询
+              p#demo-box-id
+              #coo_tex
+            .flex-shrink-0
+              //- span 更多付费内容点击：
+              //- a(href="http://39.99.133.95:8002/position/get_level1/?level1=%E6%8A%80%E6%9C%AF|%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91") 职位查询
+      //# endregion
+      hr.m-0
+      // Skills
+      section#skills.resume-section
+        .resume-section-content
+          h2.mb-5  团队
+          .subheading.mb-3 Tie HUA ZHOU
+            ul.fa-ul.mb-0
+              li
+                span.fa-li
+                  i.fas.fa-check
+                    | HANGYU Liu , 
+                span.fa-li
+                  i.fas.fa-check
+                    | KAITAI GAO ,
+                span.fa-li
+                  i.fas.fa-check
+                    | YU LU ,
+                span.fa-li
+                  i.fas.fa-check
+                    | YiMin Liu ,
+          h2.mb-5  技术支持
+          .subheading.mb-3 Big Data and Bioinformatics Lab.
+      hr.m-0
+
+    // Bootstrap core JS
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js')
+
+    // Third party plugin JS
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
+
+    // Core theme JS  
+    script(src='javascripts/Chart.js')
+
+    script(src='javascripts/scripts.js')
+
